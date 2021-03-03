@@ -154,6 +154,6 @@ clear:both property prevents floating elements from floating on either side of t
     text-align: center;
 }
 /*Styling for the header inside the footer element*/
-.footer h2 {
+.footer p {
     font-size: 20px;
 }
