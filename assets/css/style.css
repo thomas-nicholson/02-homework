@@ -1,13 +1,17 @@
 * {
+    /*border-box includes the padding and border of boxes into the width and height of the element*/
     box-sizing: border-box;
+    /*Reset padding and margin for the whole document to 0*/
     padding: 0;
     margin: 0;
 }
 
+/*Set background colour of the body */
 body {
     background-color: #d9dcd6;
 }
 
+/*Sets the background colour, the font colour, the font-family, and the padding of the header element*/
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -15,16 +19,24 @@ body {
     color: #ffffff;
 }
 
+/*sets the font-size and the display property of the h1 element in the header*/
+/*inline-block allows the height and width of the element to be designated (unlike display:inline) 
+without creating a line break after the element (unlike display:block). 
+Also, unlike display: inline, the top and bottom margins are "respected" */
 .header h1 {
     display: inline-block;
     font-size: 48px;
 }
 
+
+/*sets the font colour of the span element classed '.seo' inside the h1 element in the header*/
 .header h1 .seo {
     color: #d9dcd6;
 }
 
-.header div {
+/*sets the top padding, the right margning, the font family and the font size of the nav element within the header. 
+also tells the element to float towards the right of its parent element*/
+.header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -32,24 +44,29 @@ body {
     font-size: 20px;
 }
 
-.header div ul {
+/*removing list styling from the list inside the nav element*/
+.header nav ul {
     list-style-type: none;
 }
 
-.header div ul li {
+/*sets the left margin and display property of the list items within the unordered nav list in the header*/
+.header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
+/*disable text decoration for all links and set their color to white*/
 a {
     color: #ffffff;
     text-decoration: none;
 }
 
+/*set the font size for all paragraph elements to be 16px*/
 p {
     font-size: 16px;
 }
 
+/*set the height, width, bottom margin, background image, background image size and position of the hero image element*/
 .hero {
     height: 800px;
     width: 100%;
@@ -58,23 +75,27 @@ p {
     background-size: cover;
     background-position: center;
 }
-
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
+/*set the width of the main content to be 75% with a display property of inline-block and a left margin of 20 pixels*/
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
+/*class to tell some images in the main content to float to the left with a margin right of 25 pixels*/
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+/*class to tell one img in the main content to float towards the right with a left margin of 25 pixels*/
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+/*css for benefits aside element.
+clear:both property prevents floating elements from floating on either side of the element*/
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -86,55 +107,26 @@ p {
     background-color: #2589bd;
 }
 
-.benefit-lead {
+/*styling for the sections of the aside element*/
+.benefit-lead, .benefit-brand, .benefit-cost {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
+/*Styling for the headers in the sections of the aside element*/
+.benefit-lead h3, .benefit-brand h3, .benefit-cost h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+/*Styling for the img elements in the sections of the aside element*/
+.benefit-lead img, .benefit-brand img, .benefit-cost img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
+/*Styling for the sections in the main content element*/
+.search-engine-optimization, .online-reputation-management, .social-media-marketing {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
@@ -142,59 +134,24 @@ p {
     background-color: #0072bb;
     color: #ffffff;
 }
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
+/*Styling for the images in the sections of the main content element*/
+.search-engine-optimization img, .online-reputation-management img, .social-media-marketing img {
     max-height: 200px;
 }
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
+/*Styling for the headers in the sections of the main content element*/
+.search-engine-optimization h2, .online-reputation-management h2, .social-media-marketing h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
 
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
+/*Styling for the footer*/
 .footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
-
+/*Styling for the header inside the footer element*/
 .footer h2 {
     font-size: 20px;
 }
